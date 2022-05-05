@@ -11,6 +11,11 @@
             <argument type="service" id="Shopware\Core\Content\Product\DataAbstractionLayer\StockUpdater"/>
         </service>
 
+        <service id="NFX\InventoryUpdate\Service\Media" public="true">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="Shopware\Core\Content\Media\Pathname\UrlGeneratorInterface"/>
+        </service>
+
         <service id="NFX\InventoryUpdate\Storefront\Controller\InventoryUpdateController" public="true">
             <argument type="service" id="NFX\InventoryUpdate\Storefront\Page\InventoryUpdate\InventoryUpdatePageLoader"/>
             <argument type="service" id="NFX\InventoryUpdate\Service\Helper" />
@@ -22,6 +27,8 @@
         <service id="NFX\InventoryUpdate\Storefront\Page\InventoryUpdate\InventoryUpdatePageLoader" public="true">
             <argument type="service" id="Shopware\Storefront\Page\GenericPageLoader"/>
             <argument type="service" id="event_dispatcher"/>
+            <argument type="service" id="Shopware\Core\System\SystemConfig\SystemConfigService"/>
+            <argument type="service" id="NFX\InventoryUpdate\Service\Media"/>
         </service>
 
         <!-- Translations -->

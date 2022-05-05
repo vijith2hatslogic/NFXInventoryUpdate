@@ -19,6 +19,11 @@ class InventoryUpdatePage extends Page
      * @var ProductEntity|null
      */
     protected $product;
+
+    /**
+     * @var string|null
+     */
+    protected $bgImage;
     
     /**
      * @var array|null
@@ -33,6 +38,16 @@ class InventoryUpdatePage extends Page
     public function setProduct(?ProductEntity $product): void
     {
         $this->product = $product;
+    }
+
+    public function getBgImage(): ?string
+    {
+        return $this->bgImage;
+    }
+
+    public function setBgImage(?string $bgImage): void
+    {
+        $this->bgImage = $bgImage;
     }
 
     public function getSalesChannels(): ?array

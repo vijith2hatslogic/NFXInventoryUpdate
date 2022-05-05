@@ -15,7 +15,6 @@
 
 	{% block base_body %}
 		<body class="{% block base_body_classes %}is-ctl-{{ controllerName|lower }} is-act-{{ controllerAction|lower }}{% endblock %}">
-
 			{% block base_body_inner %}
 
 				{% block base_main %}
@@ -133,6 +132,12 @@
             {% endblock %}
         {% endif %}
     {% endblock %}
+
+        {% if page.bgImage %}
+            <div class="page-bg-wrap">
+                <img src="{{ page.bgImage }}" alt="{{ pageTitle }}" />
+            </div>
+        {% endif %}
 
 		</body>
 	{% endblock %}
