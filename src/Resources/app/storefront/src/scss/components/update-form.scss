@@ -142,6 +142,10 @@
             .btn {
                 border-top-right-radius: rem(20);
                 border-bottom-right-radius: rem(20);
+
+                &.btn-primary {
+                    border-color: $primary-color;
+                }
             }
         }
     }
