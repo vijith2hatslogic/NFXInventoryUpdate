@@ -1,0 +1,14 @@
+.is-ctl-inventoryupdate {
+    .btn-wrap {
+        margin-top: rem(30);
+
+        &.center {
+            text-align: center;
+        }
+
+        .btn {
+            &.btn-lg {}
+
+        }
+    }
+}

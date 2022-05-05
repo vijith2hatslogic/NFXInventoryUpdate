@@ -1,0 +1,23 @@
+{
+    "inventoryUpdate": {
+        "general": {
+            "pageTitle": "Update Inventory",
+            "description": "Hey, here you can search for the <span>EAN number</span> and then change the stock?"
+        },
+        "label": {
+            "eanNumber": "EAN Number",
+            "eanSearch": "EAN Search",
+            "updateStock": "Update stock",
+            "eanLabel": "EAN:",
+            "availableStock": "Available stock:",
+            "inventory": "Inventory",
+            "productStockUpdated": "Inventory increased by %stock%, available stock now is %availableStock%.",
+            "backToSearch": "Return"
+        },
+        "errors": {
+            "eanRequired": "Please enter an EAN number!",
+            "productNotFound": "Product not  found!",
+            "stockUpdateFailed": "Stock update is failed!"
+        }
+    }
+}

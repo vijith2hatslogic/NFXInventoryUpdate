@@ -1,0 +1,66 @@
+{% block page_inventory_update_form %}
+	<div class="update-form-container">
+		<div class="form-back-button">
+			<button id="backToSearch" class="btn btn-lg btn-link" data-action-url="{{ path('frontend.product.inventory.update.back.to.search') }}">
+				<div class="btn-icon">
+					<span class="chevron-left-icon nfx-icon icon-nfx-chevron-left"></span>
+				</div>
+				<div class="btn-text">
+					{{ "inventoryUpdate.label.backToSearch"|trans|sw_sanitize }}
+				</div>
+			</button>
+		</div>
+		<form id="frmInventoryUpdate" action="{{ path('frontend.product.update.stock') }}" class="inventory-update-form" method="post">
+			<div class="product-result-wrap">
+
+				<div class="product-card-thumb">
+					{% sw_include '@Storefront/storefront/component/product/card/media.html.twig' with { product: product, layout:'darts'}%}
+				</div>
+
+				<div class="product-info-wrap">
+
+					<div class="title">
+						<h3>{{ product.translated.name }}</3>
+					</div>
+
+					<div class="product-labels-wrap">
+						<label class="product-info-label">
+							{{ "detail.productNumberLabel"|trans|sw_sanitize }}
+							{{ product.productNumber }}
+						</label>
+						<label class="product-info-label">
+							{{ "inventoryUpdate.label.eanLabel"|trans|sw_sanitize }}
+							{{ product.ean }}
+						</label>
+						<label class="product-info-label">
+							{{ "inventoryUpdate.label.availableStock"|trans|sw_sanitize }}
+							{{ product.availableStock }}
+						</label>
+					</div>
+
+					<div class="update-form-row">
+						<input type="hidden" id="productId" name="productId" value="{{ product.id }}">
+						<input type="hidden" id="currentStock" name="currentStock" value="{{ product.stock }}">
+
+						<div class="input-group">
+							<input type="number" min="1" class="form-control" id="stock" name="stock" value="1">
+							<div class="input-group-append">
+								<button type="submit" id="inventoryUpdateBtn" class="btn btn-primary btn-block btn-lg">
+									{{ "inventoryUpdate.label.updateStock"|trans|sw_sanitize }}
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="alert-wrap">
+						<span class="alert success" id="successMessageLabel"></span>
+						<span class="alert error" id="errorMessageLabel"></span>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="loader" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+{% endblock %}

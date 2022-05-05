@@ -1,0 +1,44 @@
+{
+    "name": "nfx/inventory-update",
+    "description": "Update Ptoduct inventory.",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "NFX Media",
+            "homepage": "http://nfxmedia.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "NFX\\InventoryUpdate\\": "src/"
+        }
+    },
+    "require": {
+        "shopware/core": "^6.0",
+        "shopware/storefront": "^6.0",
+        "shopware/administration": "^6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "NFX\\InventoryUpdate\\NFXInventoryUpdate",
+        "copyright": "(c) by NFX Media",
+        "plugin-icon": "src/Resources/config/plugin.png",
+        "label": {
+            "de-DE": "NFX: Inventar-Updater",
+            "en-GB": "NFX: Inventory update"
+        },
+        "description": {
+            "de-DE": "Hey, hier kannst Du nach der EAN-Nummer suchen und dann den Bestand verändern.",
+            "en-GB": "Hey, here you can search for the EAN number and then change the inventory."
+        },
+        "manufacturerLink": {
+            "de-DE": "http://nfxmedia.de",
+            "en-GB": "http://nfxmedia.de"
+        },
+        "supportLink": {
+            "de-DE": "http://nfxmedia.de",
+            "en-GB": "http://nfxmedia.de"
+        }
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+
+        <service id="NFX\InventoryUpdate\Service\Helper">
+            <argument type="service" id="service_container" />
+            <argument type="service" id="Doctrine\DBAL\Connection"/>
+            <argument type="service" id="Shopware\Core\Content\Product\DataAbstractionLayer\StockUpdater"/>
+        </service>
+
+        <service id="NFX\InventoryUpdate\Storefront\Controller\InventoryUpdateController" public="true">
+            <argument type="service" id="NFX\InventoryUpdate\Storefront\Page\InventoryUpdate\InventoryUpdatePageLoader"/>
+            <argument type="service" id="NFX\InventoryUpdate\Service\Helper" />
+            <call method="setContainer">
+                <argument id="service_container" type="service"/>
+            </call>
+        </service>
+
+        <service id="NFX\InventoryUpdate\Storefront\Page\InventoryUpdate\InventoryUpdatePageLoader" public="true">
+            <argument type="service" id="Shopware\Storefront\Page\GenericPageLoader"/>
+            <argument type="service" id="event_dispatcher"/>
+        </service>
+
+        <!-- Translations -->
+        <service id="NFX\InventoryUpdate\Resources\snippet\de_DE\SnippetFile_de_DE">
+            <tag name="shopware.snippet.file"/>
+        </service>
+
+        <service id="NFX\InventoryUpdate\Resources\snippet\en_GB\SnippetFile_en_GB">
+            <tag name="shopware.snippet.file"/>
+        </service>
+
+    </services>
+
+</container>

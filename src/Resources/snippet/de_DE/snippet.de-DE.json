@@ -1,0 +1,23 @@
+{
+    "inventoryUpdate": {
+        "general": {
+            "pageTitle": "Inventar-Updater",
+            "description": "Hey, hier kannst Du nach der <span>EAN-Nummer</span> suchen und dann den Bestand verändern?"
+        },
+        "label": {
+            "eanNumber": "EAN-Nummer",
+            "eanSearch": "EAN suchen",
+            "updateStock": "Bestand aktualisieren",
+            "eanLabel": "EAN:",
+            "availableStock": "Aktueller Lagerbestand:",
+            "inventory": "Inventar",
+            "productStockUpdated": "Der Lagerbestand wurde um %stock% erhöht, der verfügbare Lagerbestand beträgt jetzt %availableStock%.",
+            "backToSearch": "Zurück"
+        },
+        "errors": {
+            "eanRequired": "Bitte geben Sie eine EAN-Nummer ein!",
+            "productNotFound": "Produkt nicht gefunden!",
+            "stockUpdateFailed": "Bestandsaktualisierung fehlgeschlagen!"
+        }
+    }
+}

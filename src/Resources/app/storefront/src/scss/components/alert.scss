@@ -1,0 +1,25 @@
+.is-ctl-inventoryupdate {
+    .alert {
+        margin: 0;
+        color: $white-color;
+        display: block;
+
+        &.error {
+            color: $error-color
+        }
+
+        &.success {
+            color: $success-color
+        }
+    }
+
+    .alert-wrap {
+        .alert {
+            &:empty {
+                display: none;
+            }
+
+            margin-top: rem(10);
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.ean-search-form {
+    margin-top: rem(30);
+
+    .form-group {
+        position: relative;
+
+        .loader {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            right: 0;
+            top: rem(20);
+            height: rem(50);
+            width: rem(50);
+
+            @include mobile-lg {
+                height: rem(40);
+                width: rem(40);
+            }
+
+            @include mobile-md {
+                height: rem(22);
+                width: rem(22);
+            }
+        }
+    }
+
+    .form-control {
+        padding: rem(15) 0;
+        font-size: rem(45);
+        letter-spacing: rem(2);
+        border: 0;
+        text-transform: uppercase;
+        border-bottom: rem(1) dashed rgba($secondary-color, 0.25);
+        background: none;
+        border-radius: 0;
+        height: auto;
+
+        &:focus {
+            background: none;
+        }
+    }
+
+    /* Change the white to any color */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0 rem(100) white inset !important;
+    }
+}

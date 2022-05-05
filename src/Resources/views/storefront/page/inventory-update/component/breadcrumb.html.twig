@@ -1,0 +1,33 @@
+{% block layout_breadcrumb_inner %}
+	{% if title %}
+		<nav aria-label="breadcrumb">
+			{% block layout_breadcrumb_list %}
+				<ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+					<li class="breadcrumb-back">
+						<a href="#" onclick="history.go(-1);">
+							<span class="chevron-left-icon nfx-icon icon-nfx-chevron-left"></span>
+							<span class="breadcrumb-title">
+								{{ "mcdart.header.labels.goToBack"|trans|striptags }}
+							</span>
+						</a>
+					</li>
+					<li class="breadcrumb-item">
+						<a href="{{ path('frontend.home.page') }}" class="breadcrumb-link" itemprop="item">
+							<span class="breadcrumb-title" itemprop="name">
+								{{ "mcdart.header.labels.homePage"|trans|striptags }}
+							</span>
+						</a>
+					</li>
+					<div class="breadcrumb-placeholder">/</div>
+					<li class="breadcrumb-item" aria-current="page">
+						<a class="breadcrumb-link is-active" itemprop="item">
+							<span class="breadcrumb-title" itemprop="name">
+								{{ title }}
+							</span>
+						</a>
+					</li>
+				</ol>
+			{% endblock %}
+		</nav>
+	{% endif %}
+{% endblock %}

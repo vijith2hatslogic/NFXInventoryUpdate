@@ -1,0 +1,25 @@
+{% block page_inventory_update_search_form %}
+	<div class="title center">
+		<h2>{{ "inventoryUpdate.general.description"|trans|sw_sanitize }}</h2>
+	</div>
+	<form id="frmEanSearch" action="{{ path('frontend.product.ean.search') }}" class="ean-search-form" method="post">
+
+		<div class="form-group">
+			<input type="text" class="form-control" autocomplete="section-personal given-name" id="eanNumber" placeholder="{{ "inventoryUpdate.label.eanNumber"|trans|sw_sanitize }}" name="ean" value="">
+			<div class="alert-wrap">
+				<span id="eanErrorLabel" class="alert error"></span>
+			</div>
+
+			<div class="loader" role="status">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+
+		<div class="btn-wrap center">
+			<button type="submit" id="eanSearchBtn" class="btn btn-xlg btn-primary btn-block btn-lg">
+				{{ "inventoryUpdate.label.eanSearch"|trans|sw_sanitize }}
+			</button>
+		</div>
+
+	</form>
+{% endblock %}

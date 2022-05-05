@@ -1,0 +1,103 @@
+.inventory-update-wrap {
+    display: flex;
+    align-items: center;
+    margin: rem(50) auto 0 auto;
+
+    .form-group-wrap {
+        flex: 0 0 100%;
+        transition: 0.3s all;
+        color: $secondary-color;
+        background-color: $white-color;
+        box-shadow: 0 -0.625rem 1.25rem rgb(6 22 51 / 15%);
+        border-radius: rem(15);
+        width: rem(800);
+        padding: rem(80);
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -200px;
+        margin-left: -400px;
+    }
+
+    .form-search-wrap {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0px) scale(1);
+    }
+
+    .form-result-wrap {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(75%) scale(0.5);
+    }
+
+    .form-back-button {
+        .btn-link {
+            text-decoration: none;
+        }
+    }
+
+    &.product-form {
+
+        .form-search-wrap {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-75%) scale(0.5);
+        }
+
+        .form-result-wrap {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0px) scale(1);
+        }
+    }
+
+    &.processing {
+        .loader {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .btn-block {
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+    }
+}
+
+.update-form-row {
+    display: flex;
+    grid-gap: rem(20);
+    margin-top: rem(30);
+
+    .input-group {
+        &>.form-control {
+            max-width: rem(160);
+            border-top-left-radius: rem(20);
+            border-bottom-left-radius: rem(20);
+        }
+
+        .input-group-append {
+            width: calc(100% - 160px);
+
+            .btn {
+                border-top-right-radius: rem(20);
+                border-bottom-right-radius: rem(20);
+            }
+        }
+    }
+}
+
+.update-form-container {
+    position: relative;
+
+    .loader {
+        top: rem(12);
+        right: 0;
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+    }
+}

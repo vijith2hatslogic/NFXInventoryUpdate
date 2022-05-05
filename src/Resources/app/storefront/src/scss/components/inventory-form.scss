@@ -1,0 +1,31 @@
+.is-ctl-inventoryupdate {
+    .product-result-wrap {
+        display: flex;
+        grid-gap: rem(30);
+        margin-top: rem(10);
+        align-items: flex-start;
+
+        .product-card-thumb {
+            min-width: rem(280);
+            min-height: rem(280);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: $product-image-background-color;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .product-info-wrap {
+            .product-labels-wrap {
+                .product-info-label {
+                    display: block;
+                    margin-top: rem(10);
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

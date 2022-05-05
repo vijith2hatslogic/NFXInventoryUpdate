@@ -1,0 +1,54 @@
+/*------------------*
+# Variables
+*------------------*/
+
+// Breakpoints
+$desktop-lg: rem(1920); // Wide Desktop Screens (Above 1680 - Large Screens)
+$desktop-md: rem(1679); // Medium Desktop Screens (Like 1480 - Macbook & Macbook Pro)
+$desktop-sm: rem(1420); // Small Desktop Screens
+$desktop-xs: rem(1360); // Small Desktop Screens
+
+$tablet-lg: rem(1250); // Landscape Tablet
+$tablet-md: rem(991); // Portrait Medium Tablet
+$tablet-sm: rem(865); // Portrait Tablet
+
+$mobile-lg: rem(767); // Mobile Landscape
+$mobile-md: rem(576); // Mobile Medium Portrait
+$mobile-sm: rem(540); // Mobile Portrait
+
+// Theme colours
+$primary-color: #db151c; // $sw-color-brand-primary
+$secondary-color: #061633; // $sw-color-brand-secondary
+$border-color: #dadae5;
+$btn-border-color: #C3C6DB;
+$primary-background-color: #fff;
+
+// Typography
+$text-color: #000000;
+$headine-color: #4a545b;
+
+// Status messages
+$success-color: #02c280;
+$information-color: #76bce7;
+$notice-color: #f09f00;
+$error-color: #FF8C99;
+
+// E-Commerce
+$price-color: #3f4c58;
+$buy-button-color: #db151c;
+$buy-button-text-color: #fff;
+
+//Other Colors
+$white-color: #fff;
+$black-color: #000;
+$grey-color: #878DB8;
+$light-grey-color: #F8F8FB;
+$footer-border-color: #CFD2E3;
+$light-white-color: #F6F6F6;
+$footer-background-color: $light-grey-color;
+$product-border-color: #DBDDEA;
+$product-image-background-color: #F3F4F8;
+$slider-arrow-color: #C6CAD2;
+$review-star: #F8C842;
+
+$primary-hover-color:#E83B27;

@@ -1,0 +1,9 @@
+body {
+    &.is-ctl-inventoryupdate {
+        background: linear-gradient(-45deg, $primary-color, $primary-hover-color, $primary-color, $primary-hover-color);
+        background-size: 400% 400%;
+        animation: gradient 5s ease infinite;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
