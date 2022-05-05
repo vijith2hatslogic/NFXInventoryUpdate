@@ -153,6 +153,7 @@
     .loader {
         top: rem(12);
         right: 0;
+        background-color: $white-color;
         position: absolute;
         visibility: hidden;
         opacity: 0;
