@@ -5,6 +5,14 @@
         margin-top: rem(10);
         align-items: flex-start;
 
+        @include mobile-lg {
+            flex-direction: column;
+        }
+
+        @include mobile-md {
+            grid-gap: rem(20);
+        }
+
         .product-card-thumb {
             min-width: rem(280);
             min-height: rem(280);
@@ -13,17 +21,35 @@
             justify-content: center;
             background: $product-image-background-color;
 
+            @include mobile-lg {
+                min-width: 100%;
+                min-height: 100%;
+            }
+
             img {
                 width: 100%;
             }
         }
 
         .product-info-wrap {
+            max-width: 100%;
+
+            .title {
+                h3 {
+                    @include mobile-md {
+                        font-size: rem(20);
+                    }
+                }
+            }
+
             .product-labels-wrap {
                 .product-info-label {
                     display: block;
                     margin-top: rem(10);
                     margin-bottom: 0;
+                    max-width: 100%;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
                 }
             }
         }

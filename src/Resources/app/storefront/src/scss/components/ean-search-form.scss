@@ -13,14 +13,9 @@
             height: rem(50);
             width: rem(50);
 
-            @include mobile-lg {
+            @include desktop-sm {
                 height: rem(40);
                 width: rem(40);
-            }
-
-            @include mobile-md {
-                height: rem(22);
-                width: rem(22);
             }
         }
     }
@@ -35,6 +30,10 @@
         background: none;
         border-radius: 0;
         height: auto;
+
+        @include desktop-sm {
+            font-size: rem(32);
+        }
 
         &:focus {
             background: none;

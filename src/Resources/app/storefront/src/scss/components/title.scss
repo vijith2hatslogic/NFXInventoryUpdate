@@ -8,6 +8,23 @@
             font-family: Arial;
             font-weight: bold;
             margin: 0;
+
+            @include desktop-md {
+                font-size: rem(110);
+            }
+
+            @include tablet-lg {
+                font-size: rem(80);
+            }
+
+            @include mobile-lg {
+                font-size: rem(40);
+                color: $white-color;
+            }
+
+            @include mobile-md {
+                font-size: rem(30);
+            }
         }
 
         h1,
