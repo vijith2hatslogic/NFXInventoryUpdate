@@ -2,7 +2,9 @@
     .title {
 
         h1 {
-            color: rgba(255, 255, 255, 0.15);
+            position: relative;
+            z-index: 3;
+            color: rgba(255, 255, 255, 0.25);
             white-space: nowrap;
             font-size: rem(140);
             font-family: Arial;
