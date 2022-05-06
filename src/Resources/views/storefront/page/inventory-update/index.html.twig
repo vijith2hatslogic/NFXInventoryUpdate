@@ -133,12 +133,14 @@
         {% endif %}
     {% endblock %}
 
+        
+    <div class="page-bg-wrap">
         {% if page.bgImage %}
-            <div class="page-bg-wrap">
-                <img src="{{ page.bgImage }}" alt="{{ pageTitle }}" />
-            </div>
+        <img src="{{ page.bgImage }}" alt="{{ pageTitle }}" />
         {% endif %}
+    </div>
+    
 
-		</body>
-	{% endblock %}
+    </body>
+{% endblock %}
 </html>
